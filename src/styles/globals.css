@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6D96CE;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #292e72;
+}
+
+/*==== login page ======*/
+.formOuter:after {
+  position: absolute;
+  content: "";
+  width: 175px;
+  height: 175px;
+  background-image: url(../../public/bgart.png);
+  bottom: -30px;
+  right: -55px;
+  background-size: contain;
+  z-index: 99999;
+}
+
+.cardHover:hover * {
+  color: #fff !important;
+}
+
+.loginSideImg {
+  background-image: url(../../public/loginB.png);
+}
+
+/* .form-control,
+.form-select {
+  border-radius: 60px;
+  outline: none !important;
+  box-shadow: none !important;
+} */
+
+label {
+
+  transform: translate(8px, 0px);
+}
+
+input:focus~label {
+  color: #5038ED !important;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label,
+select~label {
+  opacity: .65;
+  color: #000;
+  font-size: 12px;
+  transform: scale(.8) translate(8px, -20px);
+}
+
+input.floating::placeholder {
+  color: transparent;
+}
+
+.btn.btn-primary {
+  background-image: linear-gradient(45deg, #9181F4, #5038ED);
+  outline: none;
+  box-shadow: none;
+  border: none;
+  height: 52px;
+  padding: 10px 27px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  outline: none !important;
+  transition: 0.3s;
+  box-shadow: none;
+}
+
+.btn.btn-success {
+  background-image: linear-gradient(45deg, #37e100, #238f00);
+  outline: none;
+  box-shadow: none;
+  border: none;
+  height: 52px;
+  padding: 10px 27px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  outline: none !important;
+  transition: 0.3s;
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn.btn-primary:hover,
+.btn-success:hover {
+  transform: translate(0px, -8px);
+  transition: 0.3s;
+}
+
+/*=== admin dashboard ===*/
+.sidebar {
+  max-width: 14vw;
+  transition: 0.3s;
+}
+
+.pageBody {
+  max-width: calc(100vw - 14vw);
+  transition: 0.3s;
+}
+
+.modeToggle {
+  position: absolute;
+  bottom: 16px;
+}
+
+.table>:not(:last-child)>:last-child>* {
+  border-bottom-color: rgb(239 239 239) !important;
+}
+
+/* .actionButton button.deleteButton {
+  background: rgb(163 0 47 / 21%);
+  color: #a3002f;
+} */
+
+/* .actionButton button.deleteButton:hover {
+  background: #a3002f;
+  color: #fff;
+} */
+
+/* 
+.pageTable {
+  max-height: calc(100vh - 220px);
+  overflow: auto;
+} */
+
+/* table.table thead {
+  position: sticky;
+  top: 0px;
+  background: #fff;
+} */
+
+.showSidebar {
+  font-size: 25px;
+  background-image: linear-gradient(45deg, #9181F4, #5038ED);
+  font-size: 30px;
+  color: #fff;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.sidebar.active {
+  display: block;
+  z-index: 999;
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+.hideSidebar.hide .sidemenu ul li a span,
+.hideSidebar.hide .sidemenu p {
+  display: none;
+}
+
+.hideSidebar.hide .sidemenu ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hideSidebar.hide .sidebar {
+  max-width: 4vw;
+  transition: 0.3s;
+}
+
+.hideSidebar.hide .pageBody {
+  max-width: calc(100% - 4vw);
+  transition: 0.3s;
+}
+
+.hideSidebar.hide .sidebarLogo a img {
+  height: 15px !important;
+}
+
+@media (min-width:1250px) {
+
+  .siteIdentity,
+  .mobileClose {
+    display: none !important;
+  }
+}
+
+@media (max-width:1370px) {
+  .detailCard h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .detailCard p {
+    font-size: 12px;
+  }
+
+  .detailCard a {
+    font-size: 12px;
+  }
+
+  .detailCard h2 {
+    font-size: 42px;
+    font-weight: 600;
+  }
+
+  .detailCard {
+    padding: 16px;
+    border-radius: 25px !important;
+    min-height: 190px;
+  }
+}
+
+@media (max-width:1250px) {
+
+  .desktopSlide {
+    display: none;
+  }
+
+  .sidebar {
+    transform: translate(-200%, 0px);
+    transition: 0.3s;
+    max-width: 100%;
+  }
+
+  .sidebar.active {
+    z-index: 999;
+    max-width: 100%;
+    transition: all .3s;
+    transform: translate(00%, 0px);
+    transition: 0.3s;
+  }
+
+  .sidebarSlide {
+    right: 10px;
+  }
+
+  .pageBody {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: calc(100vw - 0vw);
+    background: #f2f2f2;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width:960px) {
+  .detailCard {
+    min-height: auto;
+  }
+
+  .searchBox input {
+    min-width: auto;
+  }
+}
+
+@media (max-width:767px) {
+  .loginSideImg {
+    min-height: calc(40vh - 80px);
+  }
+
+  .userName {
+    display: none !important;
+  }
+
+  .formOuter .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width:580px) {
+  .searchBox {
+    display: none !important;
+  }
+}
