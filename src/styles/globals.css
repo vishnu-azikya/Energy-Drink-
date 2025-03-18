@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -67,6 +68,25 @@ body {
 
 .loginSideImg {
   background-image: url(../../public/loginB.png);
+}
+.CheckoutBg {
+  background-image: url(../../public/checkoutBg.png);
+}
+
+.siteBanner {
+  background-image: url(../../public/siteBanner.png);
+}
+
+.siteBanner {
+  background-image: url(../../public/siteBanner.png);
+}
+
+.benifitsSec {
+  background-image: url(../../public/benifitBg.png);
+}
+
+.ourCommunity {
+  background-image: url(../../public/community.png);
 }
 
 /* .form-control,
@@ -314,8 +334,64 @@ input.floating::placeholder {
   }
 }
 
+
+.textOuter {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
 @media (max-width:580px) {
   .searchBox {
     display: none !important;
   }
+}
+
+.checkboxUI span {
+  opacity: 0;
+}
+
+.checkboxUI input:checked~span {
+  opacity: 1;
+  background-color: #2A2D6D;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.owl-nav div {
+  width: 50px;
+  height: 50px;
+  border-radius: 70px !important;
+  display: flex !important;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  background: #ffffff75 !important;
+  color: transparent !important;
+}
+
+.owl-nav div::after {
+  content: "\003E";
+  /* Unicode for right arrow */
+  font-size: 16px;
+  position: absolute;
+  font-size: 20px;
+  color: #000;
+}
+
+.owl-nav div:first-child:after {
+  content: "\003C";
+}
+
+.owl-nav div:hover {
+  background-color: #fff !important;
+  transition: 0.3s;
+  transform: translate(0px, -10px);
 }

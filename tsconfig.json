@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/index.js", "src/pages/_document.js", "src/pages/_app.js", "tailwind.config.js", "next.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/index.js", "src/pages/_document.js", "src/pages/_app.js", "tailwind.config.js", "next.config.js", "src/pages/api/hello.js", "src/pages/products.js", "src/pages/login.js", "src/pages/checkout.js", "src/pages/cart1.js", "src/pages/register.js"],
   "exclude": ["node_modules"]
 }
